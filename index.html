@@ -3,188 +3,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CIBORG347™ | Desarrollo Web Profesional</title>
-    <meta name="description" content="Landing pages y sitios web profesionales optimizados para conversión, integración con WhatsApp y captura de leads. Diseño premium y resultados reales.">
+    <title>CIBORG347™ | Desarrollo Web Profesional y Landing Pages Premium</title>
+    <meta name="description" content="Landing pages y sitios web profesionales optimizados para conversión, ventas y automatización. Diseño premium cyberpunk con integración WhatsApp.">
+    <meta name="keywords" content="landing page, desarrollo web, diseño web, WhatsApp integración, conversión ventas, ciborg347">
+    <meta name="author" content="CIBORG347™">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CIBORG347™ | Landing Pages que Convierten">
+    <meta property="og:description" content="Diseño web premium que transforma visitas en clientes reales.">
+    <meta property="og:image" content="https://iili.io/frHTvgn.md.jpg">
+    <meta property="og:url" content="https://ciborg347.com">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CIBORG347™ | Desarrollo Web Profesional">
+    <meta name="twitter:description" content="Landing pages optimizadas para ventas y automatización.">
+    <meta name="twitter:image" content="https://iili.io/frHTvgn.md.jpg">
+    
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icono WhatsApp (para favicon si querés) -->
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" type="image/svg+xml">
+    
     <style>
-        /* Reset y variables - más profesional y equilibrado */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        /* ===================================
+           RESET Y VARIABLES GLOBALES
+           =================================== */
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
         :root {
-            --bg: #0d0d0d;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
             --bg-dark: #000000;
-            --text: #f0f0f0;
+            --text-primary: #f0f0f0;
             --text-secondary: #b0b0b0;
-            --accent-primary: #00d4ff;
-            --accent-secondary: #9d00ff;
-            --glow-primary: 0 0 30px rgba(0, 212, 255, 0.4);
-            --glow-secondary: 0 0 30px rgba(157, 0, 255, 0.4);
+            --accent-cyan: #00e0ff;
+            --accent-magenta: #c800ff;
+            --glow-cyan: 0 0 30px rgba(0, 224, 255, 0.4);
+            --glow-magenta: 0 0 30px rgba(200, 0, 255, 0.4);
+            --border-glow: 1px solid rgba(0, 224, 255, 0.2);
+            --transition: all 0.4s ease;
         }
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
+            background: var(--bg-primary);
+            color: var(--text-primary);
             line-height: 1.7;
             overflow-x: hidden;
         }
-        h1, h2, h3 { font-family: 'Orbitron', sans-serif; letter-spacing: 1px; }
-
-        /* Navegación fija profesional */
+        h1, h2, h3, h4, h5 {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1.5px;
+        }
+        a { 
+            text-decoration: none; 
+            transition: var(--transition); 
+        }
+        img { 
+            max-width: 100%; 
+            display: block; 
+        }
+        
+        /* ===================================
+           NAVEGACIÓN FIJA
+           =================================== */
         nav {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            padding: 20px 40px;
-            background: rgba(13,13,13,0.9);
-            backdrop-filter: blur(15px);
+            padding: 25px 50px;
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(20px);
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid rgba(0,224,255,0.1);
         }
-        .nav-logo { font-size: 1.8rem; background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .nav-links a { color: var(--text); text-decoration: none; margin-left: 30px; font-weight: 500; transition: color 0.3s; }
-        .nav-links a:hover { color: var(--accent-primary); }
-
-        /* Header hero con imagen del Ciborg */
+        .nav-logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--accent-cyan), var(--accent-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        .nav-links a:hover {
+            color: var(--accent-cyan);
+        }
+        
+        /* ===================================
+           HERO HEADER
+           =================================== */
         header {
             position: relative;
             min-height: 100vh;
-            background: linear-gradient(to bottom, rgba(13,13,13,0.5), rgba(0,0,0,0.9)), url('https://iili.io/frHTvgn.md.jpg') center/cover no-repeat;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.4), rgba(0,0,0,0.95)), url('https://iili.io/frHTvgn.md.jpg') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 120px 20px 80px;
+            padding: 160px 20px 100px;
         }
         header h1 {
-            font-size: clamp(3.5rem, 10vw, 7rem);
-            background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+            font-size: clamp(4rem, 12vw, 8rem);
+            background: linear-gradient(to right, var(--accent-cyan), var(--accent-magenta));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: var(--glow-primary);
-            margin-bottom: 25px;
+            text-shadow: var(--glow-cyan);
+            margin-bottom: 30px;
         }
         header p {
-            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            font-size: clamp(1.4rem, 4vw, 2rem);
             max-width: 800px;
             color: var(--text-secondary);
-            margin-bottom: 50px;
+            margin-bottom: 70px;
         }
-        .cta {
-            padding: clamp(18px, 5vw, 25px) clamp(50px, 12vw, 80px);
-            font-size: clamp(1.3rem, 4vw, 1.6rem);
+        .cta-primary {
+            padding: clamp(20px, 5vw, 30px) clamp(60px, 12vw, 100px);
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
             font-weight: 600;
-            background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+            background: linear-gradient(to right, var(--accent-cyan), var(--accent-magenta));
             color: #fff;
             border: none;
-            border-radius: 50px;
+            border-radius: 60px;
             cursor: pointer;
-            box-shadow: var(--glow-primary);
-            transition: all 0.4s;
+            box-shadow: var(--glow-cyan);
+            transition: var(--transition);
         }
-        .cta:hover { transform: translateY(-5px); box-shadow: var(--glow-secondary); }
-
-        /* Secciones */
+        .cta-primary:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--glow-magenta);
+        }
+        
+        /* ===================================
+           SECCIONES GENERALES
+           =================================== */
         section {
-            padding: clamp(100px, 12vw, 160px) 20px;
+            padding: clamp(120px, 15vw, 200px) 20px;
             text-align: center;
         }
-        .benefits { background: linear-gradient(to bottom, #0d0d0d, #1a001a); }
-        .services { background: linear-gradient(to bottom, #1a001a, #0d0d0d); }
-        h2 { 
-            font-size: clamp(2.8rem, 7vw, 4.5rem); 
-            margin-bottom: clamp(60px, 10vw, 100px); 
-            background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary)); 
-            -webkit-background-clip: text; 
-            -webkit-text-fill-color: transparent; 
+        .section-title {
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: clamp(80px, 12vw, 140px);
+            background: linear-gradient(to right, var(--accent-cyan), var(--accent-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
-            gap: clamp(40px, 7vw, 60px);
+            grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
+            gap: clamp(50px, 8vw, 80px);
             max-width: 1400px;
             margin: 0 auto;
         }
         .card {
-            padding: clamp(50px, 8vw, 70px);
+            padding: clamp(60px, 10vw, 80px);
             background: rgba(255,255,255,0.03);
-            border-radius: 25px;
-            border: 1px solid rgba(0,212,255,0.1);
-            box-shadow: var(--glow-primary);
-            transition: all 0.5s;
+            border-radius: 35px;
+            border: var(--border-glow);
+            transition: var(--transition);
         }
-        .card:hover { transform: translateY(-20px); box-shadow: var(--glow-secondary); border-color: var(--accent-secondary); }
-        .card h3 { 
-            font-size: clamp(2rem, 5vw, 2.8rem); 
-            margin-bottom: 30px; 
-            color: var(--accent-primary); 
+        .card:hover {
+            transform: translateY(-25px);
+            border-color: var(--accent-magenta);
+            box-shadow: var(--glow-magenta);
         }
-        .card p { font-size: clamp(1.1rem, 3vw, 1.3rem); color: var(--text-secondary); }
-
-        /* Footer con imagen del Ciborg */
+        .card h3 {
+            font-size: clamp(2.2rem, 6vw, 3rem);
+            margin-bottom: 30px;
+            color: var(--accent-cyan);
+        }
+        .card p {
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: var(--text-secondary);
+        }
+        
+        /* Sección Sobre Nosotros */
+        .about { background: linear-gradient(to bottom, var(--bg-primary), #150015); }
+        
+        /* Sección Servicios */
+        .services { background: linear-gradient(to bottom, #150015, var(--bg-primary)); }
+        
+        /* Sección Proceso */
+        .process { background: var(--bg-secondary); }
+        .process .grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+        
+        /* Sección Testimonios */
+        .testimonials { background: linear-gradient(to bottom, var(--bg-primary), #0a0015); }
+        .testimonial-card {
+            padding: 50px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 30px;
+            border: var(--border-glow);
+        }
+        .testimonial-card p { font-style: italic; margin-bottom: 20px; }
+        .testimonial-card cite { color: var(--accent-cyan); font-weight: 600; }
+        
+        /* Sección Precios */
+        .pricing { background: linear-gradient(to bottom, #0a0015, var(--bg-primary)); }
+        .price-card {
+            padding: 60px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 35px;
+            border: var(--border-glow);
+            transition: var(--transition);
+        }
+        .price-card:hover { transform: scale(1.05); }
+        .price { font-size: 4rem; color: var(--accent-cyan); margin: 20px 0; }
+        
+        /* Sección FAQ */
+        .faq { background: var(--bg-primary); }
+        .faq-item {
+            margin-bottom: 30px;
+            text-align: left;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .faq-question {
+            font-size: 1.5rem;
+            color: var(--accent-cyan);
+            cursor: pointer;
+        }
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-secondary);
+            display: none;
+        }
+        
+        /* ===================================
+           FOOTER
+           =================================== */
         footer {
+            padding: clamp(120px, 15vw, 200px) 20px clamp(100px, 12vw, 160px);
             background: var(--bg-dark);
-            padding: clamp(80px, 12vw, 140px) 20px clamp(60px, 10vw, 100px);
             text-align: center;
         }
         .footer-ciborg {
-            max-width: min(90%, 600px);
-            margin: 0 auto 60px;
-            border-radius: 30px;
-            box-shadow: var(--glow-primary);
-            border: 2px solid rgba(0,212,255,0.2);
+            max-width: min(90%, 700px);
+            margin: 0 auto 80px;
+            border-radius: 50px;
+            box-shadow: var(--glow-cyan);
+            border: 2px solid rgba(0,224,255,0.3);
         }
-        .footer-contact {
-            margin: 50px 0;
+        .footer-title {
+            font-size: clamp(2.5rem, 7vw, 4rem);
+            margin-bottom: 40px;
+            background: linear-gradient(to right, var(--accent-cyan), var(--accent-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .whatsapp-footer {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 25px;
-            font-size: clamp(1.5rem, 5vw, 2rem);
+            gap: 35px;
+            margin: 60px 0;
         }
-        .whatsapp-footer img { width: clamp(70px, 15vw, 90px); }
+        .whatsapp-footer img { width: clamp(90px, 20vw, 120px); }
         .whatsapp-footer a {
-            color: var(--accent-primary);
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            color: var(--accent-cyan);
+            font-weight: 700;
         }
-        .whatsapp-footer a:hover { color: var(--accent-secondary); }
-        footer p { 
-            font-size: clamp(1rem, 3vw, 1.2rem); 
-            color: var(--text-secondary); 
-            margin-top: 20px;
+        .social-links {
+            margin: 50px 0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
         }
-
-        /* Botón flotante WhatsApp */
+        .social-links a { color: var(--text-secondary); font-size: 2rem; }
+        footer p {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            color: var(--text-secondary);
+            margin-top: 40px;
+        }
+        
+        /* ===================================
+           BOTÓN WHATSAPP FLOTANTE
+           =================================== */
         .whatsapp-float {
             position: fixed;
-            bottom: clamp(30px, 6vw, 40px);
-            right: clamp(30px, 6vw, 40px);
-            width: clamp(70px, 16vw, 85px);
-            height: clamp(70px, 16vw, 85px);
+            bottom: clamp(40px, 8vw, 50px);
+            right: clamp(40px, 8vw, 50px);
+            width: clamp(80px, 18vw, 100px);
+            height: clamp(80px, 18vw, 100px);
             background: #25D366;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 0 40px rgba(37,211,102,0.8);
+            box-shadow: 0 0 50px rgba(37,211,102,0.8);
             z-index: 1000;
-            transition: all 0.4s;
+            transition: var(--transition);
         }
-        .whatsapp-float:hover { transform: scale(1.15); }
-        .whatsapp-float img { width: clamp(50px, 12vw, 60px); }
-
+        .whatsapp-float:hover { transform: scale(1.2); }
+        .whatsapp-float img { width: clamp(60px, 14vw, 70px); }
+        
+        /* ===================================
+           RESPONSIVE ADICIONAL
+           =================================== */
+        @media (max-width: 992px) {
+            nav { padding: 20px 30px; }
+            .nav-links { gap: 25px; }
+        }
         @media (max-width: 768px) {
-            nav { padding: 15px 20px; flex-direction: column; gap: 15px; }
-            .nav-links { margin-top: 10px; }
-            .nav-links a { margin: 0 15px; }
+            nav { flex-direction: column; gap: 20px; padding: 20px; }
+            .nav-links { gap: 20px; }
+            header { padding-top: 180px; }
+        }
+        @media (max-width: 480px) {
+            .grid { gap: 40px; }
+            .card { padding: 40px; }
         }
     </style>
 </head>
@@ -194,86 +342,179 @@
     <nav>
         <div class="nav-logo">CIBORG347™</div>
         <div class="nav-links">
-            <a href="#beneficios">Beneficios</a>
+            <a href="#sobre">Sobre Nosotros</a>
             <a href="#servicios">Servicios</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#precios">Precios</a>
+            <a href="#faq">FAQ</a>
             <a href="#contacto">Contacto</a>
         </div>
     </nav>
 
-    <!-- Header Hero -->
+    <!-- Hero Header -->
     <header>
         <h1>CIBORG347™</h1>
-        <p>Diseño web profesional que transforma visitas en clientes reales.<br>Landing pages premium, optimizadas para ventas y automatización.</p>
-        <button class="cta" onclick="window.open('https://wa.me/5491164499481?text=Hola%20CIBORG347,%20quiero%20información%20sobre%20landing%20pages', '_blank')">Contactanos Ahora</button>
+        <p>Diseño web premium que convierte visitas en clientes reales con tecnología avanzada y automatización inteligente</p>
+        <button class="cta-primary" onclick="window.open('https://wa.me/5491164499481?text=Hola%20CIBORG347,%20quiero%20información%20sobre%20sus%20servicios', '_blank')">Contactanos Ahora</button>
     </header>
 
-    <!-- Beneficios -->
-    <section id="beneficios" class="benefits">
-        <h2>Beneficios Exclusivos</h2>
+    <!-- Sobre Nosotros -->
+    <section id="sobre" class="about">
+        <h2 class="section-title">Sobre CIBORG347™</h2>
         <div class="grid">
             <div class="card">
-                <h3>Máxima Conversión</h3>
-                <p>Diseños estratégicos que convierten visitantes en clientes leales.</p>
+                <h3>Nuestra Visión</h3>
+                <p>Creemos que cada negocio merece una presencia online poderosa, profesional y orientada a resultados. Combinamos diseño futurista con estrategias probadas de conversión.</p>
             </div>
             <div class="card">
-                <h3>Integración Inteligente</h3>
-                <p>Conexión directa con WhatsApp y automatización de respuestas.</p>
+                <h3>Nuestra Experiencia</h3>
+                <p>Años desarrollando landing pages y sitios web que generan ventas reales para emprendedores y empresas en Argentina y Latinoamérica.</p>
             </div>
             <div class="card">
-                <h3>Captura de Leads</h3>
-                <p>Sistemas automáticos para gestionar y nutrir clientes potenciales.</p>
-            </div>
-            <div class="card">
-                <h3>Diseño Premium</h3>
-                <p>Estética moderna y profesional, 100% responsive en todos los dispositivos.</p>
+                <h3>Nuestro Enfoque</h3>
+                <p>Automatización, integración con WhatsApp y optimización constante para maximizar el retorno de inversión de tu presencia digital.</p>
             </div>
         </div>
     </section>
 
     <!-- Servicios -->
     <section id="servicios" class="services">
-        <h2>Nuestros Servicios</h2>
+        <h2 class="section-title">Servicios</h2>
         <div class="grid">
             <div class="card">
-                <h3>Landing Pages</h3>
-                <p>Páginas enfocadas en conversión rápida y ventas directas.</p>
+                <h3>Landing Pages Premium</h3>
+                <p>Páginas únicas enfocadas 100% en conversión, con diseño atractivo y llamadas a acción estratégicas.</p>
             </div>
             <div class="card">
                 <h3>Sitios Web Corporativos</h3>
-                <p>Webs completas con portafolio, servicios y contacto profesional.</p>
+                <p>Webs completas, responsive y profesionales con todas las secciones necesarias para tu marca.</p>
             </div>
             <div class="card">
                 <h3>Catálogos Digitales</h3>
-                <p>Tiendas simples con integración WhatsApp para pedidos instantáneos.</p>
+                <p>Presentación de productos con integración directa a WhatsApp para pedidos instantáneos.</p>
             </div>
             <div class="card">
-                <h3>Optimización Digital</h3>
-                <p>SEO, velocidad y estrategias para posicionarte en Google.</p>
+                <h3>Optimización y Marketing</h3>
+                <p>SEO técnico, velocidad y estrategias digitales para posicionarte mejor en buscadores.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- Proceso de Trabajo -->
+    <section id="proceso" class="process">
+        <h2 class="section-title">Nuestro Proceso</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>1. Consulta Inicial</h3>
+                <p>Entendemos tus objetivos y necesidades específicas.</p>
+            </div>
+            <div class="card">
+                <h3>2. Diseño y Propuesta</h3>
+                <p>Creación de mockup personalizado y aprobación.</p>
+            </div>
+            <div class="card">
+                <h3>3. Desarrollo</h3>
+                <p>Implementación profesional con las mejores prácticas.</p>
+            </div>
+            <div class="card">
+                <h3>4. Entrega y Soporte</h3>
+                <p>Launch final, capacitación y soporte continuo.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section id="testimonios" class="testimonials">
+        <h2 class="section-title">Testimonios</h2>
+        <div class="grid">
+            <div class="testimonial-card">
+                <p>"CIBORG347 transformó mi negocio. Las ventas online aumentaron un 300% en el primer mes."</p>
+                <cite>— Juan Pérez, Emprendedor</cite>
+            </div>
+            <div class="testimonial-card">
+                <p>"Profesionalismo total. La landing page es hermosa y convierte como nunca."</p>
+                <cite>— María González, Comercio</cite>
+            </div>
+            <div class="testimonial-card">
+                <p>"La integración con WhatsApp es perfecta. Atención inmediata a clientes."</p>
+                <cite>— Carlos Rodríguez, Servicios</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Precios (ejemplo) -->
+    <section id="precios" class="pricing">
+        <h2 class="section-title">Planes</h2>
+        <div class="grid">
+            <div class="price-card">
+                <h3>Básico</h3>
+                <div class="price">$50.000</div>
+                <p>Landing page simple + integración WhatsApp</p>
+            </div>
+            <div class="price-card">
+                <h3>Profesional</h3>
+                <div class="price">$90.000</div>
+                <p>Sitio completo + catálogo + automatización</p>
+            </div>
+            <div class="price-card">
+                <h3>Premium</h3>
+                <div class="price">$150.000</div>
+                <p>Todo incluido + SEO + soporte mensual</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <h2 class="section-title">Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <div class="faq-question">¿Cuánto tiempo toma el desarrollo?</div>
+            <div class="faq-answer">Entre 7 y 21 días según la complejidad del proyecto.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">¿Incluye hosting y dominio?</div>
+            <div class="faq-answer">Podemos ayudarte a configurarlo, pero no está incluido en el precio base.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">¿Hacen mantenimiento mensual?</div>
+            <div class="faq-answer">Sí, ofrecemos planes de soporte y actualizaciones.</div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer id="contacto">
         <img src="https://iili.io/frHTvgn.md.jpg" alt="CIBORG347™" class="footer-ciborg">
-        <div class="footer-contact">
-            <h2>¿Listo para crecer?</h2>
-            <p>Contactanos y elevá tu presencia online al siguiente nivel.</p>
-        </div>
+        <h2 class="footer-title">¿Listo para el próximo nivel?</h2>
         <div class="whatsapp-footer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
             <a href="https://wa.me/5491164499481" target="_blank">+54 9 11 6449-9481</a>
         </div>
-        <p>© 2026 CIBORG347™ - Desarrollo Web y Marketing Digital Profesional</p>
+        <div class="social-links">
+            <!-- Agregá tus redes si tenés -->
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <p>© 2026 CIBORG347™ — Todos los derechos reservados</p>
         <p>San Miguel, Buenos Aires, Argentina</p>
     </footer>
 
-    <!-- Botón flotante WhatsApp -->
+    <!-- WhatsApp Flotante -->
     <div class="whatsapp-float">
         <a href="https://wa.me/5491164499481" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Contactanos por WhatsApp">
         </a>
     </div>
+
+    <!-- Script simple para FAQ toggle (opcional) -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
 
 </body>
 </html>
