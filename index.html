@@ -3,89 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CIBORG347™ | Landing Pages que Convierten</title>
-    <meta name="description" content="Landing pages profesionales optimizadas para ventas, integración con WhatsApp y automatización de leads.">
+    <title>CIBORG347™ | Landing Pages & Web Designs Profesionales</title>
+    <meta name="description" content="Landing pages optimizadas para ventas, integración con WhatsApp y automatización de leads. Convertí visitas en clientes reales.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         /* Reset y variables */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
             --bg: #0a0a0a;
             --text: #e0e0e0;
-            --accent: #00ffff;
-            --secondary: #ff00ff;
-            --glow: 0 0 20px rgba(0, 255, 255, 0.5);
+            --accent-cyan: #00ffff;
+            --accent-magenta: #ff00ff;
+            --glow-cyan: 0 0 20px rgba(0, 255, 255, 0.6);
+            --glow-magenta: 0 0 20px rgba(255, 0, 255, 0.6);
         }
         body {
-            font-family: 'Orbitron', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
         }
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        h1, h2, h3, h4 { font-family: 'Orbitron', sans-serif; }
 
-        /* Header */
+        /* Header con imagen del Ciborg */
         header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 20px;
-            background: rgba(10,10,10,0.8);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            text-align: center;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            background: linear-gradient(to right, var(--accent), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Hero */
-        .hero {
+            position: relative;
             height: 100vh;
+            background: linear-gradient(to bottom, rgba(10,10,10,0.7), rgba(10,10,10,0.9)), url('https://via.placeholder.com/1920x1080/0a0a0a/00ffff?text=CIBORG+347+CYBERPUNK+IMAGE') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 0 20px;
-            background: linear-gradient(to bottom, #0a0a0a, #1a001a);
         }
-        .hero h2 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            text-shadow: var(--glow);
+        header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, transparent 30%, var(--bg) 70%);
         }
-        .hero p {
-            font-size: 1.5rem;
+        header h1 {
+            font-size: 4.5rem;
+            background: linear-gradient(to right, var(--accent-cyan), var(--accent-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: var(--glow-cyan);
+            position: relative;
+            z-index: 2;
+        }
+        header p {
+            font-size: 1.8rem;
             max-width: 800px;
-            margin-bottom: 40px;
+            margin: 20px 0 40px;
+            position: relative;
+            z-index: 2;
         }
         .cta {
-            padding: 15px 40px;
-            font-size: 1.3rem;
-            background: linear-gradient(to right, var(--accent), var(--secondary));
+            padding: 18px 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(to right, var(--accent-cyan), var(--accent-magenta));
             color: #000;
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            box-shadow: var(--glow);
-            transition: transform 0.3s;
+            box-shadow: var(--glow-cyan);
+            transition: all 0.3s;
+            position: relative;
+            z-index: 2;
         }
-        .cta:hover { transform: scale(1.1); }
+        .cta:hover { transform: scale(1.1); box-shadow: var(--glow-magenta); }
 
-        /* Beneficios */
-        .benefits {
+        /* Secciones generales */
+        section {
             padding: 100px 20px;
             text-align: center;
-            background: #110011;
         }
-        .benefits h3 { font-size: 2.5rem; margin-bottom: 60px; }
+        .benefits { background: #110011; }
+        .services { background: #0a001a; }
+        h2 { font-size: 3rem; margin-bottom: 60px; background: linear-gradient(to right, var(--accent-cyan), var(--accent-magenta)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 40px;
             max-width: 1200px;
             margin: 0 auto;
@@ -93,73 +97,126 @@
         .card {
             padding: 40px;
             background: rgba(255,255,255,0.05);
-            border-radius: 15px;
-            box-shadow: var(--glow);
+            border-radius: 20px;
+            box-shadow: var(--glow-cyan);
+            transition: transform 0.3s;
         }
-        .card h4 { font-size: 1.8rem; margin-bottom: 20px; color: var(--accent); }
+        .card:hover { transform: translateY(-10px); }
+        .card h3 { font-size: 2rem; margin-bottom: 20px; color: var(--accent-cyan); }
 
-        /* Footer / WhatsApp */
-        .whatsapp {
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 60px 20px 40px;
+            text-align: center;
+        }
+        .footer-logo {
+            max-width: 300px;
+            margin-bottom: 30px;
+        }
+        .whatsapp-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 30px 0;
+            font-size: 1.5rem;
+        }
+        .whatsapp-footer img {
+            width: 60px;
+            height: 60px;
+        }
+        .whatsapp-footer a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer p { font-size: 0.9rem; opacity: 0.7; }
+
+        /* Botón flotante WhatsApp */
+        .whatsapp-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
+            width: 70px;
+            height: 70px;
             background: #25D366;
-            width: 60px;
-            height: 60px;
             border-radius: 50%;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 0 20px #25D366;
+            box-shadow: 0 0 30px #25D366;
             z-index: 1000;
+            transition: transform 0.3s;
         }
-        .whatsapp a { color: white; font-size: 2.5rem; }
-
-        footer {
-            padding: 40px;
-            text-align: center;
-            background: #000;
-            font-size: 0.9rem;
-        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-float img { width: 50px; height: 50px; }
     </style>
 </head>
 <body>
 
+    <!-- Header con imagen del Ciborg (reemplazá la URL por tu imagen real del ciborg) -->
     <header>
         <h1>CIBORG347™</h1>
+        <p>Landing Pages que convierten visitas en clientes reales</p>
+        <button class="cta" onclick="window.open('https://wa.me/5491164499481?text=Hola%20CIBORG347,%20quiero%20un%20ejemplo%20de%20landing%20page', '_blank')">Pedí tu Ejemplo Gratis</button>
     </header>
 
-    <section class="hero">
-        <h2>Landing Pages que Transforman Visitas en Clientes</h2>
-        <p>Diseños únicos, optimizados para ventas e integración directa con WhatsApp.</p>
-        <button class="cta" onclick="window.open('https://wa.me/5491164499481', '_blank')">Pedí tu Ejemplo Gratis</button>
-    </section>
-
+    <!-- Beneficios -->
     <section class="benefits">
-        <h3>Nuestros Beneficios</h3>
+        <h2>Nuestros Beneficios</h2>
         <div class="grid">
             <div class="card">
-                <h4>Conversión Máxima</h4>
-                <p>Diseños atractivos y optimizados para aumentar tus ventas.</p>
+                <h3>Conversión Máxima</h3>
+                <p>Diseños únicos y atractivos optimizados para aumentar tus ventas online.</p>
             </div>
             <div class="card">
-                <h4>WhatsApp Integrado</h4>
-                <p>Automatización para responder mensajes al instante.</p>
+                <h3>Integración WhatsApp</h3>
+                <p>Conexión directa y automatización para responder mensajes al instante.</p>
             </div>
             <div class="card">
-                <h4>Captura de Leads</h4>
-                <p>Flujos automáticos para gestionar clientes potenciales.</p>
+                <h3>Captura de Leads</h3>
+                <p>Flujos automáticos para gestionar y convertir clientes potenciales.</p>
             </div>
         </div>
     </section>
 
-    <div class="whatsapp">
-        <a href="https://wa.me/5491164499481" target="_blank">📱</a>
-    </div>
+    <!-- Servicios -->
+    <section class="services">
+        <h2>Servicios</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Landing Pages</h3>
+                <p>Páginas enfocadas en conversión rápida y ventas directas.</p>
+            </div>
+            <div class="card">
+                <h3>Sitios Web Completos</h3>
+                <p>Diseño full responsive con portafolio y sobre nosotros.</p>
+            </div>
+            <div class="card">
+                <h3>Catálogos Online</h3>
+                <p>Tienda simple con pedidos directos por WhatsApp.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2026 CIBORG347™ - Landing Pages & Web Designs</p>
+        <img src="https://via.placeholder.com/300x200/0a0a0a/00ffff?text=CIBORG347+LOGO" alt="CIBORG347 Logo" class="footer-logo">
+        <div class="whatsapp-footer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            <a href="https://wa.me/5491164499481" target="_blank">+54 9 11 6449-9481</a>
+        </div>
+        <p>© 2026 CIBORG347™ - Desarrollo Web y Marketing Digital</p>
+        <p>Landing Pages & Web Designs Profesionales</p>
     </footer>
+
+    <!-- Botón flotante WhatsApp oficial -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/5491164499481" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+    </div>
 
 </body>
 </html>
